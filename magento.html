@@ -56,6 +56,10 @@
     </p>
 
 
+    <h1>
+        frontend
+    </h1>
+
     <h3>Cache</h3>
     <p>
         caches são elementos que deixa o site mais rapido, lendo assim o os caches salvos,
@@ -68,7 +72,116 @@
     </p>
 
     <h1>configurar imagens</h1>
-    <p>para configurar imagens no theme </p>
+    <p>para configurar imagens de um theme usamos o arquivos view.xml dentro de um diretorio etc </p>
 
+    <h3>web</h3>
+    <p>no diretorio web vai os arquivos estaticos CSS, JS, Fontes, imagens etc</p>
+
+    <p>
+        Quando você altera os arquivos armazenados aqui durante o desenvolvimento 
+        do tema, você precisa limpar os diretórios pub/statice var/view_preprocessede, 
+        em seguida, recarregar as páginas. Caso contrário, as versões antigas dos arquivos 
+        são exibidas na vitrine.
+    </p>
+
+    <p>
+        <strong>
+            rm -r <magento_root>/pub/static/*/*
+        </strong>
+    </p>
+
+    <p>
+
+        <strong>
+            rm -r <magento_root>/var/view_preprocessed/*
+        </strong>
+    </p>
+
+    <h1>logo</h1>
+    <p>
+        No aplicativo, o formato e o nome padrão de uma imagem de logotipo são logo.svg. 
+        Quando você coloca uma logo.svgimagem no local convencional, que é o
+        <theme_dir>/web/images diretório, ela é reconhecida automaticamente como o logotipo
+        do tema. Ele é exibido no cabeçalho da página da sua loja assim que o tema é aplicado.
+    </p>
+
+    <p>
+        Quando as alterações do seu tema não estiverem visíveis mesmo após a limpeza do cache, 
+        tente reimplantar seus arquivos estáticos usando o bin/magento setup:static-content:dep
+        loycomando ou adicione o -fargumento para forçar a implantação de conteúdo estático em 
+        qualquer modo de implantação, caso você não esteja no modo de produção.
+    </p>
+
+    <p>
+        <strong>
+            OBS: A execução deste comando com o -fargumento pode corrigir problemas relacionados 
+            à implantação de conteúdo estático, mas remove todos os links simbólicos e implanta 
+            os arquivos de conteúdo estático reais.
+        </strong>
+    </p>
+
+    <p>
+        Se as alterações configuradas no Admin não forem aplicadas depois de limpar o cache e 
+        recarregar a página, exclua todos os arquivos nos diretórios 
+        pub/static/frontende var/view_preprocessede recarregue as páginas. Você pode excluir os 
+        arquivos manualmente ou executar o grunt clean:<theme_name>comando na CLI.
+    </p>
+
+    <p>
+      Use o bin/magento dev:template-hints:enablecomando para habilitar dicas de modelo e o 
+      bin/magento dev:template-hints:disablecomando para desativá-las. Não se esqueça de limpar 
+      o cache depois de executar os comandos.
+    </p>
+
+
+    <h1>backend</h1>
+
+    <h3>modulos</h3>
+    <p>
+        Os módulos interagem com outras partes do aplicativo para realizar uma função de 
+        negócios específica ou fornecer um recurso. Um módulo pode conter uma interface 
+        de usuário para exibir informações ou interagir com o usuário. Ele também pode 
+        conter interfaces de aplicativos que outro módulo ou trecho de código pode chamar.
+    </p>
+
+    <h3>Theme</h3>
+    <p>
+        Os temas fornecem um toque personalizado para cada instalação do Adobe Commerce ou 
+        Magento Open Source, alterando a aparência da vitrine ou do Admin . Dois temas já 
+        estão disponíveis na estrutura de código padrão: Tema em branco e tema Luma. 
+    </p>
+
+    <h1>i18n</h1>
+    <p>
+        Os pacotes de idiomas auxiliam na internacionalização (i18n) e na localização 
+        fornecendo traduções para strings exibidas na vitrine e no Admin.
+    </p>
+
+    <p>
+        <strong>
+            Você deve seguir uma estrutura compatível com PSR-4 ao construir um módulo.
+        </strong>
+    </p>
+
+
+    <h3>Metapacote</h3>
+    <p>
+        O Commerce Marketplace requer que mais de um componente seja empacotado como um metapacote, que consiste apenas em um composer.jsonque especifica componentes individuais e suas 
+         dependências. (Commerce Marketplace também se refere a um metapacote como uma extensão .)
+    </p>
+
+
+    <h1>locais de desenvolvimento</h1>
+    <p>
+        <Magento install directory>/app: este é o local recomendado para o desenvolvimento de componentes. Você pode configurar esse ambiente clonando o repositório GitHub do Magento 2 .
+
+            Para módulos, use app/code.
+            Para temas de vitrine, use app/design/frontend.
+            Para temas de administrador, use app/design/adminhtml.
+            Para pacotes de idiomas, use app/i18n.
+            <Magento install directory>/vendor: Você encontrará este local para instalações que usam 
+            o composer create-projectpara instalar o metapacote Magento 2 (que baixa o código CE 
+            ou EE).
+    </p>
 </body>
 </html>
