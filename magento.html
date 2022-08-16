@@ -183,5 +183,79 @@
             o composer create-projectpara instalar o metapacote Magento 2 (que baixa o código CE 
             ou EE).
     </p>
+
+    <h3>moodule.xml</h3>
+    
+    <p>	
+        Este arquivo define informações básicas sobre o componente, como dependências do 
+        componente e número da versão. O Adobe Commerce e o Magento Open Source usam o 
+        número da versão para determinar qual esquema e dados devem ser atualizados ao 
+        executar arquivos bin/magento setup:upgrade
+    </p>
+
+    <p>
+        A seguir estão alguns diretórios de módulos comuns:
+
+        Block: contém classes de visualização PHP como parte da implementação vertical do Model View 
+        Controller (MVC) da lógica do módulo.
+        Controller: contém classes de controlador PHP como parte da implementação vertical do MVC
+         da lógica do módulo.
+        etc: contém arquivos de configuração; em particular, module.xml, o que é necessário.
+        Model: contém classes de modelo PHP como parte da implementação vertical do MVC da lógica 
+        do módulo.
+        Setup: contém classes para estrutura de banco de dados de módulo e configuração de 
+        dados que são invocadas durante a instalação ou atualização.
+        ViewModel: contém classes de modelo PHP como parte de uma implementação 
+        model-view-viewmodel (MVVM). Ele permite que os desenvolvedores descarreguem recursos 
+        e lógica de negócios de classes de bloco em classes separadas que são mais fáceis de 
+        manter, testar e reutilizar.
+    </p>
+
+    <p>
+        Pastas adicionais podem ser adicionadas para configuração e outras funções auxiliares 
+        para itens como plugins , localização e arquivos de layout .
+
+        Api: contém todas as classes PHP expostas à API .
+        Console: contém comandos CLI. Para obter mais informações, consulte Adicionar 
+        comandos da CLI .
+        Cron: contém definições de tarefas cron.
+        CustomerData: contém arquivos de seção.
+        Helper: contém funcionalidade agregada.
+        i18n: contém arquivos de localização.
+        Observer: contém arquivos para execução de comandos do listener.
+        Plugin: contém todos os plug-ins necessários .
+        UI: contém arquivos de geração de dados.
+        view: contém arquivos de visualização, incluindo arquivos de visualização estática, 
+        modelos de design, modelos de email e arquivos de layout.
+    </p>
+
+    <p>
+        Os diretórios de temas típicos são:
+
+        etc: Contém arquivos de configuração, como o view.xmlarquivo que contém configurações 
+        de imagem para todas as imagens e miniaturas.
+        
+        i18n: Dicionários de tradução , se houver.
+        
+        media: As imagens de visualização do tema (captura de tela do seu tema) podem ser 
+        colocadas aqui.
+        
+        web: diretório opcional que contém arquivos estáticos organizados nos seguintes 
+        subdiretórios:
+        
+        css/source: contém os arquivos de configuração de um tema lessque invocam mixins 
+        para elementos globais da biblioteca de interface do usuário e o theme.lessarquivo 
+        que substitui os valores de variáveis ​​padrão.
+        css/source/lib: contém arquivos de exibição que substituem os arquivos de biblioteca de 
+        interface do usuário armazenados em lib/web/css/source/lib.
+        fonts: A pasta para colocar as diferentes fontes para o seu tema.
+        images: Pasta de imagens estáticas.
+        js: a pasta para seus arquivos JavaScript.
+        Para obter mais detalhes sobre a estrutura de pastas do tema, consulte estrutura do 
+        tema.
+    </p>
+
+    <h1>Criando um modulo</h1>
+    
 </body>
 </html>
